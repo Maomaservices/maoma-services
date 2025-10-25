@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maoma Services — Isabelle Bellard | Gestion administrative & Office Management</title>
+  <meta name="description" content="Maoma Services | Isabelle Bellard - 35 ans d'expérience. Gestion administrative externalisée, office management, organisation d'événements. Interventions : à distance, Angers, Les Sables-d'Olonne, région parisienne." />
+  <meta name="keywords" content="gestion administrative externalisée, office manager freelance, support administratif à distance, organisation séminaires, Angers, Les Sables-d'Olonne, Paris, Notion, Excel expert, IA, ERP, Maoma Services" />
+  <meta name="author" content="Isabelle Bellard - Maoma Services" />
+
+  <style>
+    :root{
+      --bg: #f7f5f2;        /* blanc cassé */
+      --panel: #efeae7;     /* panneau clair */
+      --text: #4b4442;      /* taupe foncé / texte principal */
+      --muted: #7a726f;     /* texte secondaire */
+      --accent: #c9a14a;    /* doré pâle pour CTA */
+      --card-shadow: rgba(16,12,10,0.06);
+      --radius: 14px;
+    }
+
+    *{box-sizing:border-box;}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.55;
+      padding-top:72px; /* top bar space */
+    }
+
+    /* Top fixed ribbon (light) */
+    .topbar{
+      position:fixed;
+      top:0;left:0;right:0;
+      height:72px;
+      background: rgba(255,255,255,0.95);
+      border-bottom:1px solid rgba(75,68,66,0.06);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:1000;
+      backdrop-filter: blur(4px);
+      padding:0 16px;
+    }
+    .topbar-inner{
+      max-width:1200px;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+
+    /* logo left */
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+    .brand img{
+      height:48px;
+      width:auto;
+      display:block;
+      object-fit:contain;
+    }
+    .brand .sr-only{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;padding:0;margin:-1px}
+
+    /* contact CTA right */
+    .cta{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      font-weight:600;
+      color:var(--text);
+    }
+    .btn-call{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background: linear-gradient(180deg, var(--accent), #b99239);
+      color: #fff;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow: 0 8px 20px rgba(201,161,74,0.12);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn-call:focus, .btn-call:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(201,161,74,0.16) }
+
+    .contact-meta{
+      font-size:0.95rem;
+      color:var(--muted);
+    }
+
+    /* Main container */
+    .container{
+      max-width:1100px;
+      margin: 24px auto;
+      padding: 20px;
+    }
+
+    .layout{
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:28px;
+      align-items:start;
+    }
+    @media(max-width:960px){
+      .layout{grid-template-columns:1fr}
+      body{padding-top:84px}
+      .topbar{height:84px}
+    }
+
+    .card{
+      background: white;
+      border-radius: var(--radius);
+      padding:26px;
+      box-shadow: 0 10px 30px var(--card-shadow);
+      border:1px solid rgba(75,68,66,0.04);
+    }
+
+    h1{ margin:0 0 8px 0; font-size:1.6rem; color:var(--text); letter-spacing:0.2px}
+    .subtitle{ margin:0 0 16px 0; color:var(--muted); font-size:1rem }
+    .lead{ color:var(--text); margin-bottom:12px }
+
+    .pills{ display:flex; gap:8px; flex-wrap:wrap; margin-top:10px }
+    .pill{ background:var(--panel); color:var(--text); padding:6px 10px; border-radius:999px; font-weight:600; font-size:0.86rem; border:1px solid rgba(75,68,66,0.03) }
+
+    .services-list{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:14px }
+    @media(max-width:720px){ .services-list{grid-template-columns:1fr} }
+
+    .service-item{ background:transparent; padding:12px; border-radius:10px; border:1px solid rgba(75,68,66,0.03) }
+    .service-item h4{ margin:0 0 6px 0; color:var(--text); font-size:1rem }
+    .service-item p{ margin:0; color:var(--muted); font-size:0.95rem }
+
+    /* contact card */
+    .contact-card .meta{ display:flex; gap:12px; align-items:center; margin-bottom:12px }
+    .contact-card .meta .sig{ width:54px; height:54px; border-radius:10px; display:flex; align-items:center; justify-content:center; background:var(--panel); color:var(--text); font-weight:700 }
+
+    .contact-details strong{ color:var(--text); font-weight:700 }
+
+    /* form styles */
+    form#contactForm{ display:flex; flex-direction:column; gap:10px }
+    input[type="text"], input[type="email"], textarea{
+      padding:12px;
+      border-radius:10px;
+      border:1px solid rgba(75,68,66,0.06);
+      background: #fff;
+      color:var(--text);
+      font-size:0.95rem;
+      outline:none;
+      resize:vertical;
+    }
+    input::placeholder, textarea::placeholder{ color: rgba(75,68,66,0.35) }
+
+    .btn-send{
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding:12px 14px;
+      border-radius:10px;
+      font-weight:700;
+      cursor:pointer;
+      transition: background .12s ease, color .12s ease, transform .12s ease;
+    }
+    .btn-send:hover{ background: var(--accent); color:#fff; transform: translateY(-2px) }
+
+    .confirmation{
+      display:none;
+      margin-top:8px;
+      padding:10px 12px;
+      border-radius:10px;
+      background: rgba(201,161,74,0.08);
+      color: #5b3f00;
+      font-weight:700;
+      border:1px solid rgba(201,161,74,0.12);
+    }
+
+    footer{
+      margin-top:22px;
+      text-align:center;
+      color:var(--muted);
+      font-size:0.92rem;
+      padding:18px 12px;
+    }
+
+    .keywords{ color:var(--muted); font-size:0.92rem }
+  </style>
+</head>
+<body>
+  <!-- Top bar with logo left and CTA right -->
+  <header class="topbar" role="banner">
+    <div class="topbar-inner">
+      <div class="brand" aria-label="Maoma Services">
+        <!-- LOGO: place Maoma_seul_maj2021.png in same folder as index.html -->
+        <img src="Maoma_seul_maj2021.png" alt="Maoma Services — logo" />
+        <span class="sr-only">Maoma Services — Isabelle Bellard</span>
+      </div>
+
+      <div class="contact-meta" aria-hidden="false">
+        📍 À distance • Angers • Les Sables-d'Olonne • Région parisienne
+      </div>
+
+      <nav class="cta" aria-label="Contact rapide">
+        <a class="btn-call" href="tel:+33622727196" title="Appeler Isabelle — 06 22 72 71 96">📞 Réserver un appel</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <div class="layout">
+      <!-- Left column: Presentation -->
+      <section class="card" aria-labelledby="about-title">
+        <h1 id="about-title">Maoma Services</h1>
+        <p class="subtitle">Rigueur, organisation et soutien administratif pour dirigeants et équipes</p>
+
+        <p class="lead"><strong>Isabelle Bellard</strong> — Office Manager & Responsable Administrative. Forte de <strong>35 ans d'expérience</strong> et entourée d'un réseau de partenaires fiables, j'accompagne les entreprises dans la <strong>gestion administrative externalisée</strong>, l'<strong>office management</strong> et l'<strong>organisation événementielle</strong> (séminaires, colloques, team building). Interventions : <strong>à distance</strong>, Angers, Les Sables-d'Olonne et région parisienne.</p>
+
+        <p class="lead">Ma valeur ajoutée : <strong>expérience opérationnelle</strong>, <strong>maîtrise avancée des outils</strong> (IA pour automatisations, <strong>Excel en expert</strong>, <strong>Notion</strong> pour structuration, et tout type d'<strong>ERP</strong>) et une <strong>approche discrète et structurée</strong> pour sécuriser votre back-office.</p>
+
+        <div class="pills" aria-hidden="true">
+          <span class="pill">35 ans d'expérience</span>
+          <span class="pill">Réseau & partenaires</span>
+          <span class="pill">IA · Excel expert · Notion · ERP</span>
+        </div>
+
+        <hr style="margin:20px 0;border:none;border-top:1px solid rgba(75,68,66,0.04)">
+
+        <h2 style="margin:0 0 12px 0">Services & expertise</h2>
+        <div class="services-list" role="list">
+          <div class="service-item" role="listitem">
+            <h4>Gestion administrative externalisée</h4>
+            <p>Facturation, suivi fournisseurs, contrats, archivage, reporting et conformité.</p>
+          </div>
+          <div class="service-item" role="listitem">
+            <h4>Office Management & pilotage</h4>
+            <p>Structuration d'équipe, optimisation des processus, déploiement d'outils collaboratifs.</p>
+          </div>
+          <div class="service-item" role="listitem">
+            <h4>Organisation événementielle</h4>
+            <p>Séminaires, colloques, réunions d'équipe : coordination logistique et gestion budgétaire.</p>
+          </div>
+          <div class="service-item" role="listitem">
+            <h4>Support ponctuel & permanent</h4>
+            <p>Renfort administratif pour pics d'activité, missions récurrentes ou projets ponctuels.</p>
+          </div>
+        </div>
+
+        <hr style="margin:20px 0;border:none;border-top:1px solid rgba(75,68,66,0.04)">
+
+        <h3 style="margin:0 0 8px 0">Cas d'intervention fréquents</h3>
+        <ul style="color:var(--muted);line-height:1.6">
+          <li>Externalisation mensuelle du back-office administratif pour PME.</li>
+          <li>Assistance lors de clôtures, audits ou périodes de forte activité.</li>
+          <li>Organisation complète d'un séminaire (logistique, prestataires, déroulé).</li>
+          <li>Mise en place d'un workspace Notion et tableaux de bord Excel avancés.</li>
+        </ul>
+      </section>
+
+      <!-- Right column: Contact / CTA -->
+      <aside class="card contact-card" aria-labelledby="contact-title">
+        <div class="meta">
+          <div class="sig" aria-hidden="true">IB</div>
+          <div>
+            <div style="font-weight:700; color:var(--text)">Contact & Réservation</div>
+            <div class="contact-meta" style="margin-top:6px">Disponible pour missions à distance et interventions locales</div>
+          </div>
+        </div>
+
+        <div class="contact-details" style="margin-bottom:12px">
+          <div style="margin-bottom:6px"><strong>Téléphone :</strong> <a href="tel:+33622727196">+33 6 22 72 71 96</a></div>
+          <div style="margin-bottom:6px"><strong>Email :</strong> <a href="mailto:maoma.services@gmail.com">maoma.services@gmail.com</a></div>
+          <div style="margin-bottom:6px"><strong>Zones :</strong> À distance • Angers • Les Sables-d'Olonne • Région parisienne</div>
+        </div>
+
+        <div style="display:flex;gap:8px;margin-bottom:10px">
+          <a class="btn-call" href="tel:+33622727196">📞 Appeler</a>
+          <a class="btn-call" href="mailto:maoma.services@gmail.com" style="background:transparent;color:var(--text);border:1px solid rgba(75,68,66,0.06);box-shadow:none">✉️ Envoyer un mail</a>
+        </div>
+
+        <hr style="margin:14px 0;border:none;border-top:1px solid rgba(75,68,66,0.03)">
+
+        <h3 id="contact-title" style="margin:0 0 10px 0">Demander un devis / Contact</h3>
+        <form id="contactForm" aria-describedby="form-desc">
+          <div id="form-desc" class="keywords" style="margin-bottom:8px">Remplissez le formulaire — réponse sous peu.</div>
+          <input type="text" id="name" name="name" placeholder="Nom & prénom *" required aria-required="true" />
+          <input type="email" id="email" name="email" placeholder="E-mail *" required aria-required="true" />
+          <textarea id="message" name="message" placeholder="Votre besoin (ex : mission ponctuelle, externalisation permanente, organisation d'un séminaire) *" rows="5" required aria-required="true"></textarea>
+          <button type="submit" class="btn-send">Envoyer</button>
+          <div class="confirmation" id="confirmation">Merci, votre message a bien été envoyé. Je vous répondrai sous peu.</div>
+        </form>
+
+        <p class="keywords" style="margin-top:12px">Mots-clés : gestion administrative externalisée, office management, organisation événementielle, Notion, Excel expert, IA, ERP, Angers, Les Sables-d'Olonne, Paris.</p>
+      </aside>
+    </div>
+
+    <footer>
+      <div>© <span id="year"></span> Maoma Services — Isabelle Bellard</div>
+      <div style="margin-top:6px" class="keywords">Services à distance • Angers • Les Sables-d'Olonne • Région parisienne</div>
+    </footer>
+  </main>
+
+  <script>
+    // copyright year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // simple form behavior (client-side confirmation only)
+    const form = document.getElementById('contactForm');
+    const confirmation = document.getElementById('confirmation');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      form.reset();
+      confirmation.style.display = 'block';
+      setTimeout(()=> confirmation.style.display = 'none', 6000);
+    });
+  </script>
+</body>
+</html>
