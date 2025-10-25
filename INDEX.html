@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Maoma Services - Isabelle Bellard | Gestion Administrative & Formation Qualiopi</title>
+  <meta name="description" content="Maoma Services : 35 ans d'expérience. Organisme de formation certifié Qualiopi. Gestion administrative externalisée, office management, organisation événementielle. Isabelle Bellard accompagne entrepreneurs et entreprises à distance, Angers, Les Sables-d'Olonne et région parisienne. Expertise IA, Excel, Notion, ERP.">
+  <meta name="keywords" content="gestion administrative externalisée, office manager freelance, organisme de formation Qualiopi, formation Excel, formation Notion, responsable administrative indépendante, support administratif à distance, externalisation administrative, organisation séminaires entreprise, organisation événements corporate, gestion back-office PME, office management Angers, gestion administrative Les Sables-d'Olonne, office manager région parisienne, Excel expert, Notion entreprise, IA gestion administrative, ERP, pilotage administratif, optimisation process, séminaires professionnels, colloques, team building, externalisation permanente, externalisation ponctuelle, formation professionnelle, accompagnement montée en compétences">
+  <meta name="author" content="Isabelle Bellard - Maoma Services">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Maoma Services - Gestion Administrative & Office Management">
+  <meta property="og:description" content="35 ans d'expérience. Organisme de formation certifié Qualiopi. Gestion administrative externalisée, office management, organisation événementielle. Interventions à distance, Angers, Les Sables-d'Olonne, région parisienne.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  
+  <!-- Structured Data (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Maoma Services",
+    "founder": {
+      "@type": "Person",
+      "name": "Isabelle Bellard",
+      "jobTitle": "Office Manager & Responsable Administrative"
+    },
+    "description": "Gestion administrative externalisée, office management, organisation événementielle et formation professionnelle. Organisme certifié Qualiopi. 35 ans d'expérience. Interventions à distance, Angers, Les Sables-d'Olonne et région parisienne.",
+    "email": "maoma.services@gmail.com",
+    "areaServed": [
+      {
+        "@type": "Country",
+        "name": "France"
+      },
+      {
+        "@type": "City",
+        "name": "Angers"
+      },
+      {
+        "@type": "City",
+        "name": "Les Sables-d'Olonne"
+      },
+      {
+        "@type": "Place",
+        "name": "Région Parisienne"
+      }
+    ],
+    "serviceType": [
+      "Gestion administrative externalisée",
+      "Office Management",
+      "Organisation événementielle",
+      "Support administratif à distance",
+      "Pilotage administratif",
+      "Optimisation des processus",
+      "Formation professionnelle",
+      "Organisme de formation certifié Qualiopi"
+    ],
+    "knowsAbout": [
+      "Intelligence Artificielle",
+      "Excel avancé",
+      "Notion",
+      "ERP",
+      "Gestion administrative",
+      "Organisation événementielle"
+    ]
+  }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --navy: #0b132b;
+      --dark-navy: #1c2541;
+      --gold: #f9d342;
+      --light: #f8f8f8;
+      --muted: #e0e0e0;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+
+    body {
+      font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--navy);
+      color: var(--light);
+      line-height: 1.7;
+      padding-top: 80px;
+    }
+
+    /* Header fixe */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--dark-navy);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 20px var(--shadow);
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-container img {
+      height: 50px;
+      width: auto;
+    }
+
+    .cta-button {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 0.8rem 1.5rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(249, 211, 66, 0.3);
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249, 211, 66, 0.5);
+      background: #f1c232;
+    }
+
+    /* Container principal */
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, var(--dark-navy), var(--navy));
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 30px var(--shadow);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    .hero .subtitle {
+      font-size: 1.4rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .hero .intro {
+      font-size: 1.05rem;
+      color: var(--light);
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    .badge {
+      background: rgba(249, 211, 66, 0.1);
+      color: var(--gold);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid rgba(249, 211, 66, 0.3);
+    }
+
+    /* Section */
+    section {
+      background: var(--dark-navy);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 8px 30px var(--shadow);
+      border: 1px solid rgba(249, 211, 66, 0.1);
+    }
+
+    h2 {
+      color: var(--gold);
+      border-bottom: 2px solid var(--gold);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    h3 {
+      color: var(--gold);
+      margin: 1.5rem 0 1rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+
+    /* Paragraphes justifiés */
+    p {
+      text-align: justify;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    p strong {
+      color: var(--light);
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .service-card {
+      background: rgba(255, 255, 255, 0.03);
+      padding: 1.5rem;
+      border-radius: 0.8rem;
+      border: 1px solid rgba(249, 211, 66, 0.2);
+      transition: all 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--gold);
+      box-shadow: 0 8px 25px rgba(249, 211, 66, 0.2);
+    }
+
+    .service-card h4 {
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .service-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: justify;
+    }
+
+    /* Secteurs clients */
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .sector-item {
+      background: rgba(249, 211, 66, 0.05);
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(249, 211, 66, 0.15);
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .sector-item:hover {
+      background: rgba(249, 211, 66, 0.1);
+      border-color: var(--gold);
+    }
+
+    .sector-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .sector-name {
+      color: var(--light);
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    /* Liste */
+    ul.list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    ul.list li {
+      padding-left: 1.5rem;
+      margin-bottom: 0.8rem;
+      position: relative;
+      color: var(--muted);
+      text-align: justify;
+    }
+
+    ul.list li::before {
+      content: "▸";
+      color: var(--gold);
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    /* Zones géographiques */
+    .zones {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 2rem 0;
+    }
+
+    .zone {
+      text-align: center;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 0.8rem;
+      border: 1px solid rgba(249, 211, 66, 0.2);
+      flex: 1;
+      min-width: 200px;
+      transition: all 0.3s;
+    }
+
+    .zone:hover {
+      transform: translateY(-3px);
+      border-color: var(--gold);
+    }
+
+    .zone-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .zone-name {
+      color: var(--gold);
+      font-weight: bold;
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+    }
+
+    /* Formulaire */
+    #contactForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 700px;
+      margin: 2rem auto 0;
+    }
+
+    input, textarea {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(249, 211, 66, 0.3);
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--light);
+      font-size: 1rem;
+      font-family: inherit;
+      transition: all 0.3s;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: rgba(224, 224, 224, 0.5);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+
+    button[type="submit"] {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 15px rgba(249, 211, 66, 0.3);
+    }
+
+    button[type="submit"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(249, 211, 66, 0.5);
+      background: #f1c232;
+    }
+
+    .form-message {
+      display: none;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+
+    .form-message.success {
+      background: rgba(110, 255, 110, 0.1);
+      color: #9eff9e;
+      border: 1px solid rgba(110, 255, 110, 0.3);
+    }
+
+    .form-message.error {
+      background: rgba(255, 110, 110, 0.1);
+      color: #ff9e9e;
+      border: 1px solid rgba(255, 110, 110, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      background: var(--dark-navy);
+      margin-top: 3rem;
+      border-top: 2px solid var(--gold);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .sectors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .zones {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .container {
+        padding: 0 1rem;
+      }
+
+      section {
+        padding: 1.5rem;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header fixe -->
+  <header>
+    <div class="logo-container">
+      <img src="Maoma_seul_maj2021.png" alt="Maoma Services Logo">
+    </div>
+    <a href="#contact" class="cta-button">Me contacter</a>
+  </header>
+
+  <!-- Container principal -->
+  <div class="container">
+    <!-- Hero Section -->
+    <div class="hero">
+      <h1>Maoma Services</h1>
+      <p class="subtitle">L'excellence administrative au service de votre performance</p>
+      <p class="intro">
+        Forte de <strong>35 ans d'expérience</strong> et titulaire d'un <strong>organisme de formation certifié Qualiopi</strong>, j'accompagne dirigeants et entrepreneurs dans la structuration et l'optimisation de leur gestion administrative. Mon approche allie rigueur opérationnelle, maîtrise des outils numériques de pointe et transmission des compétences. Entourée d'un réseau de partenaires qualifiés, je propose un service sur-mesure, de la mission ponctuelle à l'externalisation complète de votre back-office.
+      </p>
+      <div class="badges">
+        <span class="badge">35 ans d'expertise</span>
+        <span class="badge">Organisme de formation Qualiopi</span>
+        <span class="badge">Réseau professionnel</span>
+        <span class="badge">IA · Excel · Notion · ERP</span>
+      </div>
+    </div>
+
+    <!-- Services essentiels -->
+    <section>
+      <h2>Mes services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h4>Gestion administrative externalisée</h4>
+          <p>Pilotage complet de votre back-office : facturation, suivi fournisseurs, gestion des contrats, tableaux de bord, reporting et mise en conformité administrative. Une prise en charge professionnelle pour vous libérer du temps.</p>
+        </div>
+        <div class="service-card">
+          <h4>Office Management</h4>
+          <p>Coordination des équipes et des prestataires, optimisation des processus internes, déploiement d'outils collaboratifs (Notion, ERP). Je structure votre organisation pour gagner en efficacité et en sérénité.</p>
+        </div>
+        <div class="service-card">
+          <h4>Organisation événementielle</h4>
+          <p>Conception et coordination de vos séminaires, colloques et événements d'entreprise. De la logistique à la gestion budgétaire, je prends en charge l'intégralité du projet pour un résultat professionnel.</p>
+        </div>
+        <div class="service-card">
+          <h4>Appels d'offres & Supply Chain</h4>
+          <p>Accompagnement dans la réponse aux appels d'offres, gestion des achats et coordination de la chaîne logistique. Expertise reconnue pour optimiser vos coûts et sécuriser vos approvisionnements.</p>
+        </div>
+        <div class="service-card">
+          <h4>Gestion de bases de données</h4>
+          <p>Structuration, mise à jour et exploitation de vos données clients, fournisseurs ou produits. Création de tableaux de bord dynamiques pour un pilotage efficace de votre activité.</p>
+        </div>
+        <div class="service-card">
+          <h4>Formation & Accompagnement</h4>
+          <p>Organisme de formation certifié Qualiopi. Formation de vos équipes aux outils de gestion administrative, Excel avancé, Notion, processus métiers. Accompagnement personnalisé et montée en compétences durable.</p>
+        </div>
+        <div class="service-card">
+          <h4>Missions spécifiques</h4>
+          <p>Support administratif ponctuel ou permanent, mise en place de procédures, formation aux outils numériques, accompagnement de projets. Chaque mission est adaptée à vos besoins réels.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ils m'ont fait confiance -->
+    <section>
+      <h2>Ils m'ont fait confiance</h2>
+      <p>Mon expérience s'est construite au contact de secteurs d'activité variés, me permettant d'acquérir une vision transversale et une capacité d'adaptation reconnue. J'ai accompagné avec succès des structures de toutes tailles, du créateur d'entreprise au groupe établi, tant dans la gestion opérationnelle que dans la formation de leurs équipes.</p>
+      
+      <div class="sectors-grid">
+        <div class="sector-item">
+          <div class="sector-icon">🏢</div>
+          <div class="sector-name">Start-ups IT</div>
+        </div>
+        <div class="sector-item">
+          <div class="sector-icon">🛠️</div>
+          <div class="sector-name">Artisans</div>
+        </div>
+        <div class="sector-item">
+          <div class="sector-icon">🌾</div>
+          <div class="sector-name">Secteur agricole</div>
+        </div>
+        <div class="sector-item">
+          <div class="sector-icon">🤝</div>
+          <div class="sector-name">Espaces de coworking</div>
+        </div>
+        <div class="sector-item">
+          <div class="sector-icon">📊</div>
+          <div class="sector-name">Équipes commerciales</div>
+        </div>
+        <div class="sector-item">
+          <div class="sector-icon">🎓</div>
+          <div class="sector-name">Tech de Co (DUT)</div>
+        </div>
+        <div class="sector-item">
+          <div class="sector-icon">📦</div>
+          <div class="sector-name">Supply Chain</div>
+        </div>
+        <div class="sector-item">
+          <div class="sector-icon">📋</div>
+          <div class="sector-name">Appels d'offres</div>
+        </div>
+        <div class="sector-item">
+          <div class="sector-icon">🎓</div>
+          <div class="sector-name">Organisme de formation</div>
+        </div>
+      </div>
+
+      <p style="margin-top: 2rem;">
+        Cette polyvalence me permet de comprendre rapidement vos enjeux métiers et de vous proposer des solutions concrètes, testées et éprouvées. Quelle que soit votre activité, je m'adapte à votre culture d'entreprise et à vos méthodes de travail.
+      </p>
+    </section>
+
+    <!-- Pourquoi me choisir -->
+    <section>
+      <h2>Mes atouts</h2>
+      <ul class="list">
+        <li><strong>Une expérience solide :</strong> 35 années d'exercice auprès d'entreprises et de dirigeants exigeants, dans des contextes variés et des secteurs multiples.</li>
+        <li><strong>Certification Qualiopi :</strong> Organisme de formation certifié. Expertise reconnue dans l'accompagnement et la montée en compétences de vos équipes sur les outils de gestion administrative et digitaux.</li>
+        <li><strong>Une maîtrise technique avancée :</strong> Utilisation experte d'Excel (tableaux croisés dynamiques, formules complexes, automatisations), Notion pour la structuration, outils d'IA pour l'optimisation, et intégration de tout type d'ERP.</li>
+        <li><strong>Un réseau qualifié :</strong> Partenaires sélectionnés et fiables pour tous vos besoins connexes (logistique, technique, événementiel, communication).</li>
+        <li><strong>Une approche sur-mesure :</strong> Chaque entreprise est unique. J'analyse vos besoins réels et construis avec vous une solution adaptée à votre organisation et à votre budget.</li>
+        <li><strong>Discrétion et confidentialité :</strong> Respect absolu de vos informations sensibles et de vos enjeux stratégiques.</li>
+        <li><strong>Flexibilité :</strong> Intervention à distance ou en présentiel, missions ponctuelles ou permanentes, disponibilité ajustée à vos contraintes.</li>
+      </ul>
+    </section>
+
+    <!-- Zones d'intervention -->
+    <section>
+      <h2>Zones d'intervention</h2>
+      <div class="zones">
+        <div class="zone">
+          <div class="zone-icon">🌐</div>
+          <div class="zone-name">À distance</div>
+          <p style="color: var(--muted); font-size: 0.9rem; text-align: center;">France entière</p>
+        </div>
+        <div class="zone">
+          <div class="zone-icon">📍</div>
+          <div class="zone-name">Angers</div>
+          <p style="color: var(--muted); font-size: 0.9rem; text-align: center;">Maine-et-Loire</p>
+        </div>
+        <div class="zone">
+          <div class="zone-icon">🏖️</div>
+          <div class="zone-name">Les Sables-d'Olonne</div>
+          <p style="color: var(--muted); font-size: 0.9rem; text-align: center;">Vendée</p>
+        </div>
+        <div class="zone">
+          <div class="zone-icon">🗼</div>
+          <div class="zone-name">Région Parisienne</div>
+          <p style="color: var(--muted); font-size: 0.9rem; text-align: center;">Île-de-France</p>
+        </div>
+      </div>
+      <p style="text-align: center; margin-top: 1.5rem;">
+        Interventions en présentiel privilégiées pour l'organisation de séminaires, colloques et événements professionnels nécessitant une coordination sur site.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Parlons de votre projet</h2>
+      <p style="text-align: center; margin-bottom: 2rem;">
+        Vous recherchez un support administratif de qualité ? Vous souhaitez externaliser tout ou partie de votre gestion ? Former vos équipes aux outils digitaux ? Organiser un événement professionnel ? Décrivez-moi votre besoin, je vous répondrai rapidement avec une proposition adaptée.
+      </p>
+      
+      <form id="contactForm" action="https://formspree.io/f/VOTRE_FORMSPREE_ID" method="POST">
+        <input type="text" name="name" placeholder="Nom & Prénom *" required>
+        <input type="email" name="email" placeholder="Email professionnel *" required>
+        <input type="text" name="company" placeholder="Entreprise / Structure">
+        <textarea name="message" placeholder="Décrivez votre besoin (mission ponctuelle, externalisation permanente, formation d'équipe, organisation événementielle, autre) *" required></textarea>
+        <button type="submit">Envoyer ma demande</button>
+      </form>
+      
+      <div id="formMessage" class="form-message"></div>
+      
+      <p style="text-align: center; margin-top: 2rem;">
+        <strong>Email :</strong> <a href="mailto:maoma.services@gmail.com" style="color: var(--gold); text-decoration: none;">maoma.services@gmail.com</a>
+      </p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; <span id="year"></span> Maoma Services — Isabelle Bellard</p>
+    <p style="margin-top: 0.5rem;">Office Manager & Responsable Administrative</p>
+    <p style="margin-top: 0.5rem;">À distance • Angers • Les Sables-d'Olonne • Région Parisienne</p>
+  </footer>
+
+  <script>
+    // Année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Gestion du formulaire avec Formspree
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const formData = new FormData(form);
+      
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          formMessage.textContent = '✓ Merci pour votre message ! Je vous répondrai dans les plus brefs délais.';
+          formMessage.className = 'form-message success';
+          formMessage.style.display = 'block';
+          form.reset();
+          
+          setTimeout(() => {
+            formMessage.style.display = 'none';
+          }, 6000);
+        } else {
+          throw new Error('Erreur lors de l\'envoi');
+        }
+      } catch (error) {
+        formMessage.textContent = '✗ Une erreur est survenue. Merci de me contacter directement : maoma.services@gmail.com';
+        formMessage.className = 'form-message error';
+        formMessage.style.display = 'block';
+      }
+    });
+
+    // Smooth scroll pour le bouton "Me contacter"
+    document.querySelector('a[href="#contact"]').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
