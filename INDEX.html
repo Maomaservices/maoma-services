@@ -571,6 +571,23 @@
       </div>
     </section>
 
+   <script>
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', function() {
+    const content = this.nextElementSibling;
+    const isOpen = content.style.display === 'block';
+    
+    // Ferme toutes les autres réponses
+    document.querySelectorAll('.faq-answer').forEach(answer => {
+      answer.style.display = 'none';
+    });
+    
+    // Ouvre/ferme la réponse cliquée
+    content.style.display = isOpen ? 'none' : 'block';
+  });
+});
+</script>
+    
     <section id="contact">
       <h2>Parlons de votre projet</h2>
       <p style="text-align: center; margin-bottom: 2rem;">Vous recherchez un support administratif et commercial de qualité ? Vous souhaitez externaliser tout ou partie de votre gestion ? Former vos équipes aux outils digitaux ? Organiser un événement professionnel ? Décrivez-moi votre besoin, je vous répondrai rapidement avec une proposition adaptée.</p>
@@ -626,3 +643,4 @@
         formMessage.textContent = '✗ Une erreur est survenue. Merci de me contacter directement : maoma.services@gmail.com ou 06 22 72 71 96';
         formMessage.className = 'form-message error';
         formMessage.style.display = 'blo
+
